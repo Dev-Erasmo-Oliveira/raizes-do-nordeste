@@ -1,0 +1,20 @@
+{
+  "name": "Raizes do Nordeste",
+  "short_name": "Raizes",
+  "description": "Cardapio por unidade, pedidos para retirada, fidelidade e pagamento simulado.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8F0",
+  "theme_color": "#B5451B",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+flowchart TB
+  subgraph CANAIS["Canais de atendimento"]
+    direction LR
+    WEB["Web responsivo<br/>navegador"]
+    APP["App simulado<br/>moldura mobile"]
+    TOT["Totem<br/>modo quiosque"]
+  end
+
+  subgraph SPA["Aplicação React + TypeScript + Vite"]
+    ROUTER["React Router<br/>rotas e proteção por sessão"]
+    PAGES["Páginas e componentes<br/>cardápio, carrinho, checkout,<br/>pagamento, acompanhamento,<br/>fidelidade, operação, totem"]
+    CTX["AppContext<br/>carrinho, pedidos, sessão,<br/>pontos, consentimento, papéis"]
+    RULES["Regras de domínio<br/>preços, cupons, pontos,<br/>status do pedido"]
+    STORE[("localStorage<br/>dados mockados por dispositivo")]
+  end
+
+  subgraph SERVIÇOS["Mocks e simulação local"]
+    CAT["Catálogo e unidades<br/>(mock)"]
+    PAY["Simulador local de pagamento<br/>Pix e cartão (sem gateway real)"]
+  end
+
+  WEB --> ROUTER
+  APP --> ROUTER
+  TOT --> ROUTER
+  ROUTER --> PAGES
+  PAGES --> CTX
+  CTX --> RULES
+  CTX <--> STORE
+  RULES --> CAT
+  CTX --> PAY
+  PAY -. "retorno visual<br/>aprovado, recusado ou timeout" .-> CTX
+
+  classDef channel fill:#f7e3d8,stroke:#b5451b,color:#2a201a
+  classDef app fill:#fff8f0,stroke:#b5451b,color:#2a201a
+  classDef data fill:#e2ede3,stroke:#2f5d3a,color:#23452c
+  classDef ext fill:#fbefd8,stroke:#9a6412,color:#6f4a10,stroke-dasharray:4 3
+  class WEB,APP,TOT channel
+  class ROUTER,PAGES,CTX,RULES app
+  class STORE data
+  class CAT,PAY ext

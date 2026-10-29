@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="660" viewBox="0 0 1440 660" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="ar-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5b4a40"/></marker>
+<marker id="ar-terra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b5451b"/></marker>
+<marker id="ar-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2f5d3a"/></marker>
+<marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2c567a"/></marker>
+<marker id="ar-mut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9a8a7e"/></marker>
+</defs>
+<rect width="1440" height="660" fill="#ffffff"/>
+<text x="40" y="40.0" font-size="24" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="40" dy="0.0">Consentimento e direitos do titular na interface</tspan>
+</text>
+<rect x="40" y="96" width="252" height="150" rx="14" fill="#fff8f0" stroke="#b5451b" stroke-width="1.5"/>
+<circle cx="74" cy="130" r="18" fill="#b5451b"/>
+<text x="74" y="130.0" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">
+<tspan x="74" dy="0.0">1</tspan>
+</text>
+<text x="102" y="132.0" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="102" dy="0.0">Primeiro acesso</tspan>
+</text>
+<text x="60" y="176.8" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="60" dy="0.0">banner de</tspan>
+<tspan x="60" dy="18.3">consentimento</tspan>
+</text>
+<line x1="294" y1="171" x2="322" y2="171" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="324" y="96" width="252" height="150" rx="14" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.5"/>
+<circle cx="358" cy="130" r="18" fill="#e0a03a"/>
+<text x="358" y="130.0" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">
+<tspan x="358" dy="0.0">2</tspan>
+</text>
+<text x="386" y="132.0" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="386" dy="0.0">Escolha granular</tspan>
+</text>
+<text x="344" y="176.8" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="344" dy="0.0">necessários, analytics</tspan>
+<tspan x="344" dy="18.3">e marketing</tspan>
+</text>
+<line x1="578" y1="171" x2="606" y2="171" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="608" y="96" width="252" height="150" rx="14" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.5"/>
+<circle cx="642" cy="130" r="18" fill="#2f5d3a"/>
+<text x="642" y="130.0" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">
+<tspan x="642" dy="0.0">3</tspan>
+</text>
+<text x="670" y="132.0" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="670" dy="0.0">Registro</tspan>
+</text>
+<text x="628" y="176.8" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="628" dy="0.0">versão 2026-1,</tspan>
+<tspan x="628" dy="18.3">data e escolhas</tspan>
+</text>
+<line x1="862" y1="171" x2="890" y2="171" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="892" y="96" width="252" height="150" rx="14" fill="#fff8f0" stroke="#b5451b" stroke-width="1.5"/>
+<circle cx="926" cy="130" r="18" fill="#b5451b"/>
+<text x="926" y="130.0" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">
+<tspan x="926" dy="0.0">4</tspan>
+</text>
+<text x="954" y="132.0" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="954" dy="0.0">Uso transparente</tspan>
+</text>
+<text x="912" y="176.8" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="912" dy="0.0">pedido, retirada</tspan>
+<tspan x="912" dy="18.3">e suporte</tspan>
+</text>
+<line x1="1146" y1="171" x2="1174" y2="171" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="1176" y="96" width="252" height="150" rx="14" fill="#e5eef7" stroke="#2c567a" stroke-width="1.5"/>
+<circle cx="1210" cy="130" r="18" fill="#2c567a"/>
+<text x="1210" y="130.0" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">
+<tspan x="1210" dy="0.0">5</tspan>
+</text>
+<text x="1238" y="132.0" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="1238" dy="0.0">Direitos</tspan>
+</text>
+<text x="1196" y="176.8" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="1196" dy="0.0">exportar, revogar</tspan>
+<tspan x="1196" dy="18.3">e excluir</tspan>
+</text>
+<rect x="40" y="296" width="660" height="300" rx="14" fill="#fdfaf6" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="64" y="330.0" font-size="19" font-weight="bold" fill="#b5451b" text-anchor="start">
+<tspan x="64" dy="0.0">Controles implementados</tspan>
+</text>
+<circle cx="72" cy="364" r="4" fill="#b5451b"/>
+<text x="86" y="364.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Banner com aceitar todos, somente essenciais e preferências.</tspan>
+</text>
+<circle cx="72" cy="402" r="4" fill="#b5451b"/>
+<text x="86" y="402.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Aviso de privacidade no checkout, sem checkbox obrigatório.</tspan>
+</text>
+<circle cx="72" cy="440" r="4" fill="#b5451b"/>
+<text x="86" y="440.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Preferências opcionais salvas localmente, sem envio de eventos ou ofertas.</tspan>
+</text>
+<circle cx="72" cy="478" r="4" fill="#b5451b"/>
+<text x="86" y="478.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Marketing e analytics desligados por padrão nas preferências.</tspan>
+</text>
+<circle cx="72" cy="516" r="4" fill="#b5451b"/>
+<text x="86" y="516.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Exportação dos dados em JSON e exclusão com confirmação.</tspan>
+</text>
+<circle cx="72" cy="554" r="4" fill="#b5451b"/>
+<text x="86" y="554.0" font-size="15" font-weight="normal" fill="#2a201a" text-anchor="start">
+<tspan x="86" dy="0.0">Pedidos ficam no navegador; sem API ou gateway real configurado.</tspan>
+</text>
+<rect x="740" y="296" width="660" height="300" rx="14" fill="#fdfaf6" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="764" y="330.0" font-size="19" font-weight="bold" fill="#2f5d3a" text-anchor="start">
+<tspan x="764" dy="0.0">Dados e finalidades</tspan>
+</text>
+<text x="764" y="368.0" font-size="15" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="764" dy="0.0">Nome, telefone e e-mail</tspan>
+</text>
+<text x="764" y="388.0" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="764" dy="0.0">preparar e liberar a retirada</tspan>
+</text>
+<text x="764" y="412.0" font-size="15" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="764" dy="0.0">Unidade e itens do pedido</tspan>
+</text>
+<text x="764" y="432.0" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="764" dy="0.0">produção e conferência no balcão</tspan>
+</text>
+<text x="764" y="456.0" font-size="15" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="764" dy="0.0">Histórico e pontos</tspan>
+</text>
+<text x="764" y="476.0" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="764" dy="0.0">fidelidade e atendimento</tspan>
+</text>
+<text x="764" y="500.0" font-size="15" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="764" dy="0.0">Consentimento</tspan>
+</text>
+<text x="764" y="520.0" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="764" dy="0.0">prova de autorização e auditoria</tspan>
+</text>
+<text x="764" y="544.0" font-size="15" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="764" dy="0.0">Preferência de canal</tspan>
+</text>
+<text x="764" y="564.0" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="start">
+<tspan x="764" dy="0.0">demonstração Web, App ou Totem</tspan>
+</text>
+</svg>

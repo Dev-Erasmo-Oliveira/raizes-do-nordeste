@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="ar-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5b4a40"/></marker>
+<marker id="ar-terra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b5451b"/></marker>
+<marker id="ar-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2f5d3a"/></marker>
+<marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2c567a"/></marker>
+<marker id="ar-mut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9a8a7e"/></marker>
+</defs>
+<rect width="1440" height="860" fill="#ffffff"/>
+<text x="40" y="40.0" font-size="24" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="40" dy="0.0">Arquitetura da solução — SPA React com serviços simulados</tspan>
+</text>
+<text x="40" y="92.0" font-size="13" font-weight="bold" fill="#b5451b" text-anchor="start">
+<tspan x="40" dy="0.0">CANAIS</tspan>
+</text>
+<rect x="40" y="108" width="280" height="82" rx="12" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.5"/>
+<text x="180.0" y="139.2" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="180.0" dy="0.0">Web responsivo</tspan>
+</text>
+<text x="180.0" y="167.0" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="180.0" dy="0.0">navegador</tspan>
+</text>
+<line x1="180" y1="192" x2="180" y2="250" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="350" y="108" width="280" height="82" rx="12" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.5"/>
+<text x="490.0" y="139.2" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="490.0" dy="0.0">App simulado</tspan>
+</text>
+<text x="490.0" y="167.0" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="490.0" dy="0.0">moldura mobile</tspan>
+</text>
+<line x1="490" y1="192" x2="490" y2="250" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="660" y="108" width="280" height="82" rx="12" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.5"/>
+<text x="800.0" y="139.2" font-size="19" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="800.0" dy="0.0">Totem</tspan>
+</text>
+<text x="800.0" y="167.0" font-size="15" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="800.0" dy="0.0">modo quiosque</tspan>
+</text>
+<line x1="800" y1="192" x2="800" y2="250" stroke="#b5451b" stroke-width="2" marker-end="url(#ar-terra)"/>
+<rect x="40" y="254" width="1360" height="130" rx="16" fill="#fdfaf6" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="720" y="292.0" font-size="22" font-weight="bold" fill="#8e3413" text-anchor="middle">
+<tspan x="720" dy="0.0">Aplicação React 18 + TypeScript + Vite</tspan>
+</text>
+<text x="720" y="324.0" font-size="16" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="720" dy="0.0">React Router · componentes próprios · CSS mobile-first · build estático</tspan>
+</text>
+<text x="720" y="352.0" font-size="16" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="720" dy="0.0">Sem backend: estado e persistência simulados no dispositivo</tspan>
+</text>
+<rect x="40" y="434" width="300" height="105" rx="12" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.5"/>
+<text x="190.0" y="473.9" font-size="18" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="190.0" dy="0.0">React Router</tspan>
+</text>
+<text x="190.0" y="501.1" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="190.0" dy="0.0">rotas públicas,</tspan>
+<tspan x="190.0" dy="17.1">protegidas e quiosque</tspan>
+</text>
+<rect x="380" y="434" width="300" height="105" rx="12" fill="#fff8f0" stroke="#b5451b" stroke-width="1.5"/>
+<text x="530.0" y="473.9" font-size="18" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="530.0" dy="0.0">Páginas e componentes</tspan>
+</text>
+<text x="530.0" y="501.1" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="530.0" dy="0.0">cardápio, carrinho,</tspan>
+<tspan x="530.0" dy="17.1">checkout, operação, totem</tspan>
+</text>
+<rect x="720" y="434" width="300" height="105" rx="12" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.5"/>
+<text x="870.0" y="473.9" font-size="18" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="870.0" dy="0.0">AppContext</tspan>
+</text>
+<text x="870.0" y="501.1" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="870.0" dy="0.0">carrinho, pedidos, sessão,</tspan>
+<tspan x="870.0" dy="17.1">pontos, LGPD e papéis</tspan>
+</text>
+<rect x="1060" y="434" width="300" height="105" rx="12" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.5"/>
+<text x="1210.0" y="473.9" font-size="18" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="1210.0" dy="0.0">Regras de domínio</tspan>
+</text>
+<text x="1210.0" y="501.1" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="1210.0" dy="0.0">preços, cupons, pontos,</tspan>
+<tspan x="1210.0" dy="17.1">status e permissões</tspan>
+</text>
+<line x1="190" y1="384" x2="190" y2="432" stroke="#b5451b" stroke-width="1.6" marker-end="url(#ar-terra)"/>
+<line x1="530" y1="384" x2="530" y2="432" stroke="#b5451b" stroke-width="1.6" marker-end="url(#ar-terra)"/>
+<line x1="870" y1="384" x2="870" y2="432" stroke="#2f5d3a" stroke-width="1.6" marker-end="url(#ar-green)"/>
+<line x1="1022" y1="486" x2="1058" y2="486" stroke="#e0a03a" stroke-width="1.6" marker-end="url(#ar-ink)"/>
+<rect x="700" y="620" width="300" height="85" rx="12" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.5"/>
+<text x="850.0" y="652.3" font-size="18" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="850.0" dy="0.0">localStorage</tspan>
+</text>
+<text x="850.0" y="672.7" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="850.0" dy="0.0">dados mockados por</tspan>
+<tspan x="850.0" dy="17.1">dispositivo</tspan>
+</text>
+<rect x="1080" y="620" width="320" height="85" rx="12" fill="#e5eef7" stroke="#2c567a" stroke-width="1.5"/>
+<text x="1240.0" y="652.3" font-size="17" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="1240.0" dy="0.0">Serviços simulados</tspan>
+</text>
+<text x="1240.0" y="681.2" font-size="14" font-weight="normal" fill="#5b4a40" text-anchor="middle">
+<tspan x="1240.0" dy="0.0">catálogo mockado e pagamento local</tspan>
+</text>
+<line x1="850" y1="541" x2="850" y2="618" stroke="#2f5d3a" stroke-width="1.6" marker-end="url(#ar-green)" marker-start="url(#ar-green)"/>
+<text x="866" y="582.0" font-size="12" font-weight="normal" fill="#23452c" text-anchor="start">
+<tspan x="866" dy="0.0">estado persistido</tspan>
+</text>
+<line x1="1210" y1="541" x2="1210" y2="618" stroke="#2c567a" stroke-width="1.6" marker-end="url(#ar-blue)" marker-start="url(#ar-blue)"/>
+<text x="720" y="790.0" font-size="15" font-weight="normal" fill="#7d6c61" text-anchor="middle">
+<tspan x="720" dy="0.0">Em produção, AppContext e as regras de domínio seriam substituídos por chamadas autenticadas a uma API,</tspan>
+</text>
+<text x="720" y="816.0" font-size="15" font-weight="normal" fill="#7d6c61" text-anchor="middle">
+<tspan x="720" dy="0.0">com validação de permissões no servidor e persistência em banco de dados.</tspan>
+</text>
+</svg>

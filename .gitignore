@@ -1,0 +1,18 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+.DS_Store
+.vite
+
+# Arquivos temporários do Word/Office criados ao exportar o relatório
+~$*
+*.tmp
+Thumbs.db
+*.log
+
+# Editores
+.vscode/
+.idea/

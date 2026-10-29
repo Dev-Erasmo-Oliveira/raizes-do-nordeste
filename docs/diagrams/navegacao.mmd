@@ -1,0 +1,38 @@
+flowchart LR
+  HOME["Início"] --> CARD["Cardápio"]
+  HOME --> UNID["Unidades"]
+  HOME --> PROMO["Promoções"]
+  HOME --> FID["Fidelidade<br/>(autenticado)"]
+  HOME --> PED["Meus pedidos<br/>(autenticado)"]
+  HOME --> PERFIL["Perfil e privacidade<br/>(autenticado)"]
+  HOME --> OPS["Painel operacional"]
+  HOME --> TOTEM["Totem"]
+
+  CARD --> PRODUTO["Detalhe do produto"]
+  PRODUTO --> CARRINHO["Carrinho"]
+  CARRINHO --> CHECKOUT["Checkout"]
+  CHECKOUT --> PAGAMENTO["Pagamento"]
+  PAGAMENTO --> ACOMP["Acompanhamento"]
+  ACOMP --> PED
+  PED --> ACOMP
+  FID --> CHECKOUT
+  PROMO --> CHECKOUT
+  PERFIL --> PRIV["Política de privacidade"]
+  HOME --> PRIV
+
+  TOTEM --> TCART["Carrinho do totem"]
+  TCART --> TPAG["Pagamento no totem"]
+  TPAG --> TSUC["Confirmação e código"]
+  TSUC --> TOTEM
+
+  OPS --> FILA["Fila da unidade"]
+  FILA --> DETALHE["Comanda e ações por perfil"]
+
+  classDef main fill:#f7e3d8,stroke:#b5451b,color:#2a201a
+  classDef flow fill:#fff8f0,stroke:#b5451b,color:#2a201a
+  classDef kiosk fill:#e2ede3,stroke:#2f5d3a,color:#23452c
+  classDef ops fill:#fbefd8,stroke:#9a6412,color:#6f4a10
+  class HOME,CARD,UNID,PROMO main
+  class PRODUTO,CARRINHO,CHECKOUT,PAGAMENTO,ACOMP,PED,FID,PERFIL,PRIV flow
+  class TOTEM,TCART,TPAG,TSUC kiosk
+  class OPS,FILA,DETALHE ops

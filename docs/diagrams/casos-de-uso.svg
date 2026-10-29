@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="940" viewBox="0 0 1240 940" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="ar-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5b4a40"/></marker>
+<marker id="ar-terra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b5451b"/></marker>
+<marker id="ar-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2f5d3a"/></marker>
+<marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2c567a"/></marker>
+<marker id="ar-mut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9a8a7e"/></marker>
+</defs>
+<rect width="1240" height="940" fill="#ffffff"/>
+<rect x="290" y="56" width="680" height="650" rx="18" fill="#fdfaf6" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="630" y="86.0" font-size="21" font-weight="bold" fill="#8e3413" text-anchor="middle">
+<tspan x="630" dy="0.0">Sistema Raízes do Nordeste</tspan>
+</text>
+<line x1="140" y1="395" x2="320" y2="140" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="225" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="310" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="395" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="480" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="565" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="140" y1="395" x2="320" y2="650" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<ellipse cx="470" cy="140" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="127.8" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Consultar cardápio</tspan>
+<tspan x="470" dy="24.4">por unidade</tspan>
+</text>
+<ellipse cx="470" cy="225" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="212.8" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Cadastrar-se e</tspan>
+<tspan x="470" dy="24.4">autenticar</tspan>
+</text>
+<ellipse cx="470" cy="310" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="297.8" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Montar pedido e</tspan>
+<tspan x="470" dy="24.4">escolher retirada</tspan>
+</text>
+<ellipse cx="470" cy="395" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="382.8" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Acompanhar status</tspan>
+<tspan x="470" dy="24.4">do pedido</tspan>
+</text>
+<ellipse cx="470" cy="480" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="480.0" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Resgatar recompensa</tspan>
+</text>
+<ellipse cx="470" cy="565" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="552.8" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Gerenciar consentimento</tspan>
+<tspan x="470" dy="24.4">e dados pessoais</tspan>
+</text>
+<ellipse cx="470" cy="650" rx="148" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="470" y="650.0" font-size="20" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="470" dy="0.0">Realizar pagamento</tspan>
+</text>
+<line x1="1125" y1="195" x2="963" y2="195" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="195" x2="963" y2="305" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="195" x2="963" y2="415" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="405" x2="963" y2="195" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="405" x2="963" y2="305" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="600" x2="963" y2="195" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="600" x2="963" y2="305" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="600" x2="963" y2="415" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<line x1="1125" y1="600" x2="963" y2="525" stroke="#5b4a40" stroke-width="1.4" marker-end="url(#ar-ink)"/>
+<ellipse cx="831" cy="195" rx="134" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="831" y="184.0" font-size="18" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="831" dy="0.0">Consultar fila</tspan>
+<tspan x="831" dy="22.0">da unidade</tspan>
+</text>
+<ellipse cx="831" cy="305" rx="134" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="831" y="294.0" font-size="18" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="831" dy="0.0">Avançar status e</tspan>
+<tspan x="831" dy="22.0">confirmar retirada</tspan>
+</text>
+<ellipse cx="831" cy="415" rx="134" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="831" y="415.0" font-size="18" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="831" dy="0.0">Cancelar pedido</tspan>
+</text>
+<ellipse cx="831" cy="525" rx="134" ry="35" fill="#fff8f0" stroke="#b5451b" stroke-width="1.6"/>
+<text x="831" y="514.0" font-size="18" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="831" dy="0.0">Acompanhar indicadores</tspan>
+<tspan x="831" dy="22.0">da unidade</tspan>
+</text>
+<circle cx="105" cy="343" r="13" fill="#2f5d3a" stroke="#23452c" stroke-width="1.5"/>
+<line x1="105" y1="356" x2="105" y2="387" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="85" y1="365" x2="125" y2="365" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="105" y1="387" x2="89" y2="413" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="105" y1="387" x2="121" y2="413" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<text x="105" y="439.0" font-size="20" font-weight="bold" fill="#23452c" text-anchor="middle">
+<tspan x="105" dy="0.0">Cliente</tspan>
+</text>
+<line x1="124" y1="770" x2="322" y2="672" stroke="#2c567a" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="215" y="730.0" font-size="13" font-weight="normal" fill="#2c567a" text-anchor="middle">
+<tspan x="215" dy="0.0">conceitual</tspan>
+</text>
+<circle cx="105" cy="728" r="13" fill="#2f5d3a" stroke="#23452c" stroke-width="1.5"/>
+<line x1="105" y1="741" x2="105" y2="772" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="85" y1="750" x2="125" y2="750" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="105" y1="772" x2="89" y2="798" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="105" y1="772" x2="121" y2="798" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<text x="105" y="815.5" font-size="14" font-weight="bold" fill="#23452c" text-anchor="middle">
+<tspan x="105" dy="0.0">Sistemas de Pagamento</tspan>
+<tspan x="105" dy="17.1">Externos*</tspan>
+</text>
+<circle cx="1155" cy="143" r="13" fill="#2f5d3a" stroke="#23452c" stroke-width="1.5"/>
+<line x1="1155" y1="156" x2="1155" y2="187" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1135" y1="165" x2="1175" y2="165" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="187" x2="1139" y2="213" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="187" x2="1171" y2="213" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<text x="1155" y="239.0" font-size="19" font-weight="bold" fill="#23452c" text-anchor="middle">
+<tspan x="1155" dy="0.0">Atendente</tspan>
+</text>
+<circle cx="1155" cy="353" r="13" fill="#2f5d3a" stroke="#23452c" stroke-width="1.5"/>
+<line x1="1155" y1="366" x2="1155" y2="397" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1135" y1="375" x2="1175" y2="375" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="397" x2="1139" y2="423" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="397" x2="1171" y2="423" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<text x="1155" y="449.0" font-size="19" font-weight="bold" fill="#23452c" text-anchor="middle">
+<tspan x="1155" dy="0.0">Cozinha</tspan>
+</text>
+<circle cx="1155" cy="548" r="13" fill="#2f5d3a" stroke="#23452c" stroke-width="1.5"/>
+<line x1="1155" y1="561" x2="1155" y2="592" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1135" y1="570" x2="1175" y2="570" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="592" x2="1139" y2="618" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<line x1="1155" y1="592" x2="1171" y2="618" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<text x="1155" y="632.4" font-size="19" font-weight="bold" fill="#23452c" text-anchor="middle">
+<tspan x="1155" dy="0.0">Gerente /</tspan>
+<tspan x="1155" dy="23.2">Administrador</tspan>
+</text>
+<text x="620" y="912.0" font-size="14" font-weight="normal" fill="#7d6c61" text-anchor="middle">
+<tspan x="620" dy="0.0">*Ator conceitual previsto no enunciado; o protótipo usa simulador local, sem integração real.</tspan>
+</text>
+</svg>

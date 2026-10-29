@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Projeto academico. Nenhuma pagina exige autenticacao para ser indexada,
+# mas o conteudo e ficticio e nao deve ser tratado como site comercial.

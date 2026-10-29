@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wireframes — Rede Raízes do Nordeste</title>
+    <style>
+      :root {
+        --ink: #2b2b2b;
+        --line: #3a3a3a;
+        --soft: #e7e7e7;
+        --softer: #f3f3f3;
+        --muted: #6b6b6b;
+        --paper: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        background: #dcdcdc;
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      .sheet {
+        width: 1560px;
+        margin: 0 auto;
+        padding: 56px 56px 72px;
+        background: var(--paper);
+      }
+
+      .sheet-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: end;
+        padding-bottom: 24px;
+        border-bottom: 3px solid var(--line);
+      }
+
+      .kicker {
+        margin: 0 0 6px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 38px;
+        line-height: 1.1;
+      }
+
+      .sub {
+        margin: 10px 0 0;
+        font-size: 15px;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+
+      .legend {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .legend li { display: flex; align-items: center; gap: 8px; }
+
+      .swatch {
+        width: 26px;
+        height: 16px;
+        border: 1.5px solid var(--line);
+        border-radius: 4px;
+        flex: none;
+      }
+
+      .swatch.dashed { border-style: dashed; background: var(--softer); }
+      .swatch.fill { background: var(--soft); }
+      .swatch.solid { background: var(--line); }
+
+      .section {
+        margin-top: 44px;
+        break-inside: avoid;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        margin-bottom: 18px;
+        border-bottom: 1.5px solid #c9c9c9;
+        padding-bottom: 8px;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .section-head p {
+        margin: 0;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      /* ---------- moldura do wireframe ---------- */
+      .frames {
+        display: grid;
+        grid-template-columns: repeat(4, 342px);
+        justify-content: space-between;
+        gap: 26px 18px;
+      }
+
+      .wf {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .wf-cap {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .wf-num {
+        display: inline-grid;
+        place-items: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--line);
+        color: #fff;
+        font-size: 11px;
+        flex: none;
+      }
+
+      .wf-cap small {
+        font-weight: 400;
+        color: var(--muted);
+      }
+
+      .wf-notes {
+        margin: 0;
+        padding-left: 16px;
+        font-size: 10.5px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .device-wrap {
+        width: 100%;
+        aspect-ratio: 390 / 844;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .device {
+        width: 390px;
+        height: 844px;
+        transform-origin: top left;
+        transform: scale(calc(1 / 390 * 100%));
+        border: 2px solid var(--line);
+        border-radius: 26px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      /* escala via container query não é necessária: usamos zoom fixo abaixo */
+      .device { transform: none; }
+      .device-wrap { width: 342px; height: 740px; }
+      .device { transform: scale(0.877); }
+
+      .status {
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+        font-size: 10px;
+        color: var(--muted);
+        border-bottom: 1px solid #ededed;
+      }
+
+      .appbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px 14px;
+        border-bottom: 1.5px solid var(--line);
+      }
+
+      .brand {
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .pill {
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 9px;
+        font-size: 9.5px;
+        color: var(--ink);
+        background: #fff;
+        white-space: nowrap;
+      }
+
+      .body {
+        flex: 1;
+        overflow: hidden;
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .center { text-align: center; }
+
+      .ph {
+        border: 1.5px dashed #9a9a9a;
+        background: repeating-linear-gradient(135deg, #f4f4f4 0 6px, #ececec 6px 12px);
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        color: #6f6f6f;
+        font-size: 10px;
+        text-align: center;
+        padding: 6px;
+        line-height: 1.3;
+      }
+
+      .ph.fill { background: var(--soft); border-style: solid; border-color: #c4c4c4; }
+      .ph.tall { height: 150px; }
+      .ph.hero { height: 132px; }
+      .ph.media { height: 190px; }
+      .ph.map { height: 92px; }
+      .ph.qr { width: 132px; height: 132px; margin: 0 auto; }
+
+      .row { display: flex; gap: 8px; align-items: center; }
+      .row.between { justify-content: space-between; }
+      .row.wrap { flex-wrap: wrap; }
+      .col { display: flex; flex-direction: column; gap: 8px; }
+      .grow { flex: 1; }
+
+      .line {
+        height: 8px;
+        border-radius: 4px;
+        background: #e3e3e3;
+        width: 100%;
+      }
+
+      .line.dark { background: #cfcfcf; }
+      .line.t30 { width: 30%; }
+      .line.t40 { width: 40%; }
+      .line.t50 { width: 50%; }
+      .line.t60 { width: 60%; }
+      .line.t70 { width: 70%; }
+      .line.t80 { width: 80%; }
+      .line.h12 { height: 12px; }
+      .line.h16 { height: 16px; }
+
+      .btn {
+        border-radius: 8px;
+        border: 1.5px solid var(--line);
+        padding: 9px 10px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 700;
+        background: #fff;
+      }
+
+      .btn.primary { background: var(--line); color: #fff; }
+      .btn.block { width: 100%; }
+      .btn.small { padding: 6px 8px; font-size: 10px; }
+
+      .card {
+        border: 1.5px solid #c9c9c9;
+        border-radius: 10px;
+        padding: 9px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #fff;
+      }
+
+      .card.soft { background: var(--softer); }
+
+      .prod-row {
+        display: grid;
+        grid-template-columns: 64px 1fr auto;
+        gap: 9px;
+        align-items: center;
+        border: 1.5px solid #c9c9c9;
+        border-radius: 10px;
+        padding: 7px;
+      }
+
+      .thumb {
+        width: 64px;
+        height: 58px;
+        border-radius: 7px;
+        background: repeating-linear-gradient(135deg, #f2f2f2 0 6px, #e8e8e8 6px 12px);
+        border: 1.5px dashed #a5a5a5;
+      }
+
+      .price { font-size: 10.5px; font-weight: 800; white-space: nowrap; }
+
+      .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+
+      .chip {
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 9px;
+        font-size: 9.5px;
+        white-space: nowrap;
+      }
+
+      .chip.on { background: var(--line); color: #fff; }
+
+      .search {
+        border: 1.5px solid #bdbdbd;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 10px;
+        color: #8a8a8a;
+        background: var(--softer);
+      }
+
+      .field {
+        border: 1.5px solid #bdbdbd;
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 10px;
+        color: #8a8a8a;
+        background: #fff;
+      }
+
+      .label { font-size: 9.5px; font-weight: 700; color: #555; }
+
+      .check {
+        display: flex;
+        gap: 7px;
+        align-items: flex-start;
+        font-size: 9.5px;
+        color: #555;
+        line-height: 1.35;
+      }
+
+      .box {
+        width: 13px;
+        height: 13px;
+        border: 1.5px solid var(--line);
+        border-radius: 3px;
+        flex: none;
+        margin-top: 1px;
+      }
+
+      .box.on { background: var(--line); }
+
+      .totem-bar, .buy-bar, .cart-bar {
+        margin-top: auto;
+        border-top: 1.5px solid var(--line);
+        padding: 10px 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        background: #fff;
+      }
+
+      .stepper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 3px 8px;
+        font-size: 12px;
+      }
+
+      .stepper span { font-weight: 700; }
+
+      .tabbar {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border-top: 1.5px solid var(--line);
+        height: 54px;
+        align-items: center;
+        text-align: center;
+        font-size: 8.5px;
+        color: var(--muted);
+      }
+
+      .tabbar .on { color: var(--ink); font-weight: 800; }
+
+      .tabbar div { display: grid; gap: 3px; justify-items: center; }
+
+      .dot {
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid currentColor;
+        border-radius: 5px;
+      }
+
+      .steps {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 8.5px;
+        color: var(--muted);
+      }
+
+      .steps b {
+        display: inline-grid;
+        place-items: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line);
+        font-size: 9px;
+        color: var(--ink);
+      }
+
+      .steps b.on { background: var(--line); color: #fff; }
+
+      .status-tag {
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 3px 8px;
+        font-size: 9px;
+        font-weight: 700;
+        background: var(--soft);
+        white-space: nowrap;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .tl-item {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: 8px;
+        min-height: 46px;
+        position: relative;
+      }
+
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 18px;
+        bottom: 0;
+        width: 1.5px;
+        background: #cfcfcf;
+      }
+
+      .tl-item:last-child::before { display: none; }
+
+      .tl-dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line);
+        background: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 8px;
+        z-index: 1;
+      }
+
+      .tl-dot.done { background: var(--line); color: #fff; }
+
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+      .toast {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 68px;
+        border: 1.5px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 9.5px;
+        background: #fff;
+        box-shadow: 0 4px 0 #e2e2e2;
+      }
+
+      .banner {
+        border: 1.5px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 9.5px;
+        background: var(--softer);
+        display: grid;
+        gap: 6px;
+      }
+
+      .kpi { border: 1.5px solid #c9c9c9; border-radius: 10px; padding: 9px; display: grid; gap: 4px; }
+      .kpi strong { font-size: 17px; }
+
+      .ops-item {
+        border: 1.5px solid #c9c9c9;
+        border-radius: 10px;
+        padding: 8px;
+        display: grid;
+        gap: 6px;
+      }
+
+      /* ---------- desktop ---------- */
+      .desk-wrap { width: 700px; height: 437px; overflow: hidden; position: relative; }
+      .desk {
+        width: 1440px;
+        height: 900px;
+        transform-origin: top left;
+        transform: scale(0.4861);
+        border: 2px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .desk-head {
+        height: 76px;
+        border-bottom: 1.5px solid var(--line);
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 0 44px;
+      }
+
+      .desk-nav { display: flex; gap: 22px; font-size: 14px; color: #555; margin-left: auto; }
+
+      .desk-body { flex: 1; padding: 32px 44px; display: grid; gap: 22px; overflow: hidden; }
+
+      .desk-hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: center; }
+
+      .desk-hero .ph { height: 300px; }
+
+      .h1-lines { display: grid; gap: 12px; }
+      .h1-lines .line { height: 26px; border-radius: 6px; }
+      .h1-lines .line:nth-child(3) { width: 70%; }
+
+      .desk-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+      .desk-cards .ph { height: 150px; }
+
+      .desk-cols { display: grid; grid-template-columns: 1.6fr 1fr; gap: 26px; align-items: start; }
+
+      .desk-footer { height: 56px; border-top: 1.5px solid var(--line); margin-top: auto; }
+
+      /* ---------- mapa de fluxo ---------- */
+      .flowmap {
+        border: 1.5px solid #c9c9c9;
+        border-radius: 14px;
+        padding: 26px 28px;
+        display: grid;
+        gap: 18px;
+        background: #fcfcfc;
+      }
+
+      .flow-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+      .node {
+        border: 1.5px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 11px;
+        font-weight: 700;
+        background: #fff;
+        white-space: nowrap;
+      }
+
+      .node.alt { background: var(--soft); }
+      .node.dark { background: var(--line); color: #fff; }
+
+      .arrow { color: #8a8a8a; font-size: 14px; }
+
+      .flow-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        width: 104px;
+        flex: none;
+      }
+
+      .notes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .note {
+        border-left: 3px solid var(--line);
+        padding: 2px 0 2px 14px;
+        font-size: 12px;
+        color: #4a4a4a;
+        line-height: 1.5;
+      }
+
+      .note strong { display: block; font-size: 12px; margin-bottom: 3px; color: var(--ink); }
+
+      @media print {
+        @page { size: A4 landscape; margin: 10mm; }
+        html, body { background: #fff; }
+        .sheet { width: auto; padding: 0; }
+        .section { break-inside: avoid; }
+        .wf { break-inside: avoid; }
+        .desk-wrap, .device-wrap { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <header class="sheet-head">
+        <div>
+          <p class="kicker">Projeto Multidisciplinar · Trilha Front-End</p>
+          <h1>Wireframes de baixa fidelidade</h1>
+          <p class="sub">
+            Rede Raízes do Nordeste — retirada no balcão, três unidades (Recife, Fortaleza e Natal),
+            fidelidade por pontos e pagamento simulado localmente. Frames mobile em 390 × 844 e desktop
+            em 1440 × 900, na ordem em que o cliente percorre o fluxo.
+          </p>
+        </div>
+        <ul class="legend">
+          <li><span class="swatch dashed"></span> Área de conteúdo / dado mockado</li>
+          <li><span class="swatch fill"></span> Superfície de apoio (fundo ou estado)</li>
+          <li><span class="swatch solid"></span> Ação primária e elementos fixos</li>
+          <li>Texto real apenas onde a decisão de conteúdo importa</li>
+        </ul>
+      </header>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Fluxo do cliente — mobile</h2>
+          <p>Da descoberta ao acompanhamento · 390 × 844 · barra de demonstração de canal no topo</p>
+        </div>
+
+        <div class="frames">
+          <!-- 01 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">01</span> Início <small>/</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">RAÍZES</span>
+                  <span class="pill">Recife · Boa Viagem</span>
+                </div>
+                <div class="body">
+                  <div class="ph hero">Imagem de campanha<br />tapioca + café</div>
+                  <div class="col" style="gap: 6px">
+                    <div class="line dark h12 t80"></div>
+                    <div class="line t60"></div>
+                    <div class="row" style="margin-top: 4px">
+                      <div class="btn primary grow">Ver cardápio</div>
+                      <div class="btn grow">Como funciona</div>
+                    </div>
+                  </div>
+                  <div class="row between">
+                    <span class="label">Peça para retirar</span>
+                    <span class="pill">3 passos</span>
+                  </div>
+                  <div class="grid3">
+                    <div class="ph" style="height: 54px">1. Escolha</div>
+                    <div class="ph" style="height: 54px">2. Pague</div>
+                    <div class="ph" style="height: 54px">3. Retire</div>
+                  </div>
+                  <div class="row between">
+                    <span class="label">Categorias</span>
+                    <span class="pill">ver todas</span>
+                  </div>
+                  <div class="chips">
+                    <span class="chip on">Tapiocas</span>
+                    <span class="chip">Cuscuz</span>
+                    <span class="chip">Salgados</span>
+                    <span class="chip">Bebidas</span>
+                  </div>
+                  <div class="row between" style="margin-top: 2px">
+                    <span class="label">Mais pedidos</span>
+                    <span class="pill">Recife</span>
+                  </div>
+                  <div class="grid2">
+                    <div class="card">
+                      <div class="ph" style="height: 58px">foto</div>
+                      <div class="line t80"></div>
+                      <div class="row between"><span class="price">R$ 18,90</span><span class="pill">+</span></div>
+                    </div>
+                    <div class="card">
+                      <div class="ph" style="height: 58px">foto</div>
+                      <div class="line t70"></div>
+                      <div class="row between"><span class="price">R$ 16,90</span><span class="pill">+</span></div>
+                    </div>
+                  </div>
+                  <div class="banner">
+                    <strong style="font-size: 10px">Fidelidade</strong>
+                    <div class="row between">
+                      <span>1 ponto a cada R$ 1</span>
+                      <span class="status-tag">120 pts</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabbar">
+                  <div class="on"><span class="dot"></span>Início</div>
+                  <div><span class="dot"></span>Cardápio</div>
+                  <div><span class="dot"></span>Pedidos</div>
+                  <div><span class="dot"></span>Fidelidade</div>
+                  <div><span class="dot"></span>Perfil</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Unidade ativa sempre visível: preço e disponibilidade dependem dela.</li>
+              <li>Atalho para o cardápio como única ação primária do hero.</li>
+              <li>Barra de demonstração Web/App/Totem acima do cabeçalho, fora da área do app.</li>
+            </ol>
+          </figure>
+
+          <!-- 02 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">02</span> Cardápio <small>/cardapio</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">RAÍZES</span>
+                  <span class="pill">Recife · até 22h</span>
+                </div>
+                <div class="body">
+                  <div class="search">Buscar no cardápio…</div>
+                  <div class="chips">
+                    <span class="chip on">Todas</span>
+                    <span class="chip">Tapiocas</span>
+                    <span class="chip">Cuscuz</span>
+                    <span class="chip">Doces</span>
+                  </div>
+                  <div class="row between">
+                    <span class="label">Tapiocas · 3 itens</span>
+                    <span class="pill">ordenar</span>
+                  </div>
+                  <div class="prod-row">
+                    <div class="thumb"></div>
+                    <div class="col" style="gap: 5px">
+                      <div class="line dark t80"></div>
+                      <div class="line t60"></div>
+                      <div class="row"><span class="pill">Mais pedido</span></div>
+                    </div>
+                    <div class="col" style="align-items: end; gap: 6px">
+                      <span class="price">R$ 18,90</span>
+                      <span class="pill">+</span>
+                    </div>
+                  </div>
+                  <div class="prod-row">
+                    <div class="thumb"></div>
+                    <div class="col" style="gap: 5px">
+                      <div class="line dark t70"></div>
+                      <div class="line t50"></div>
+                    </div>
+                    <div class="col" style="align-items: end; gap: 6px">
+                      <span class="price">R$ 14,90</span>
+                      <span class="pill">+</span>
+                    </div>
+                  </div>
+                  <div class="prod-row">
+                    <div class="thumb"></div>
+                    <div class="col" style="gap: 5px">
+                      <div class="line dark t60"></div>
+                      <div class="line t40"></div>
+                    </div>
+                    <div class="col" style="align-items: end; gap: 6px">
+                      <span class="price">R$ 16,90</span>
+                      <span class="pill">+</span>
+                    </div>
+                  </div>
+                  <div class="ph" style="height: 84px">Indisponível nesta unidade<br />(estado alternativo)</div>
+                </div>
+                <div class="cart-bar">
+                  <div class="col grow" style="gap: 3px">
+                    <span class="label">2 itens · R$ 35,80</span>
+                    <div class="line t50" style="height: 5px"></div>
+                  </div>
+                  <div class="btn primary">Ver carrinho</div>
+                </div>
+                <div class="tabbar">
+                  <div><span class="dot"></span>Início</div>
+                  <div class="on"><span class="dot"></span>Cardápio</div>
+                  <div><span class="dot"></span>Pedidos</div>
+                  <div><span class="dot"></span>Fidelidade</div>
+                  <div><span class="dot"></span>Perfil</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Busca e categorias ficam visíveis sem rolagem.</li>
+              <li>Barra do carrinho aparece só quando há itens e leva ao resumo.</li>
+              <li>Itens indisponíveis permanecem listados, porém bloqueados.</li>
+            </ol>
+          </figure>
+
+          <!-- 03 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">03</span> Produto <small>/produto/:id</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="pill">voltar</span>
+                  <span class="brand">DETALHE</span>
+                  <span class="pill">favoritar</span>
+                </div>
+                <div class="body">
+                  <div class="ph media">Imagem do produto</div>
+                  <div class="col" style="gap: 6px">
+                    <div class="line dark h16 t80"></div>
+                    <div class="line t60"></div>
+                    <div class="row between" style="margin-top: 2px">
+                      <span class="price" style="font-size: 15px">R$ 18,90</span>
+                      <span class="pill">2 a 3 porções</span>
+                    </div>
+                  </div>
+                  <div class="label">Adicionais · até 2</div>
+                  <div class="card soft">
+                    <div class="check"><span class="box on"></span><span class="grow">Queijo coalho extra</span><span>R$ 3,00</span></div>
+                    <div class="check"><span class="box"></span><span class="grow">Carne de sol extra</span><span>R$ 6,00</span></div>
+                    <div class="check"><span class="box"></span><span class="grow">Molho de pimenta</span><span>R$ 1,50</span></div>
+                  </div>
+                  <div class="label">Observação</div>
+                  <div class="field" style="height: 58px">Ex.: sem cebola</div>
+                  <div class="banner">
+                    <span>Preparado na hora · retirada em ~20 min</span>
+                  </div>
+                </div>
+                <div class="buy-bar">
+                  <div class="stepper"><span>−</span><span>1</span><span>+</span></div>
+                  <div class="btn primary grow">Adicionar · R$ 21,90</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Preço do botão já considera os adicionais escolhidos.</li>
+              <li>O limite de adicionais é do produto, não global.</li>
+              <li>Observação entra na chave do item: mesma combinação soma quantidade.</li>
+            </ol>
+          </figure>
+
+          <!-- 04 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">04</span> Carrinho <small>/carrinho</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">CARRINHO</span>
+                  <span class="pill">Recife · Boa Viagem</span>
+                </div>
+                <div class="body">
+                  <div class="card">
+                    <div class="row between">
+                      <span class="label">Tapioca de Carne de Sol</span>
+                      <span class="price">R$ 18,90</span>
+                    </div>
+                    <div class="row between">
+                      <span style="font-size: 9px; color: #6b6b6b">+ Queijo extra</span>
+                      <div class="stepper"><span>−</span><span>1</span><span>+</span></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="row between">
+                      <span class="label">Suco de Caju</span>
+                      <span class="price">R$ 8,90</span>
+                    </div>
+                    <div class="row between">
+                      <span style="font-size: 9px; color: #6b6b6b">400 ml</span>
+                      <div class="stepper"><span>−</span><span>2</span><span>+</span></div>
+                    </div>
+                  </div>
+                  <div class="row"><div class="field grow">Cupom de desconto</div><div class="btn">Aplicar</div></div>
+                  <div class="banner">
+                    <div class="row between"><span>Subtotal</span><span>R$ 36,70</span></div>
+                    <div class="row between"><span>Cupom RAIZES10</span><span>− R$ 3,67</span></div>
+                    <div class="row between"><span>Pontos</span><span>usar no checkout</span></div>
+                    <div class="row between"><strong>Total</strong><strong>R$ 33,03</strong></div>
+                  </div>
+                  <div class="ph" style="height: 64px">Estado vazio: "Seu carrinho está vazio" + CTA cardápio</div>
+                </div>
+                <div class="buy-bar">
+                  <div class="btn primary grow">Ir para o checkout</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Cupom é validado na hora, com mensagem de erro junto ao campo.</li>
+              <li>Resumo mostra subtotal, desconto e total antes do checkout.</li>
+              <li>Trocar de unidade com carrinho cheio pede confirmação.</li>
+            </ol>
+          </figure>
+
+          <!-- 05 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">05</span> Checkout <small>/checkout</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">CHECKOUT</span>
+                  <span class="pill">etapa 1 de 2</span>
+                </div>
+                <div class="body">
+                  <div class="steps">
+                    <b class="on">1</b> Dados
+                    <span>—</span>
+                    <b>2</b> Pagamento
+                    <span>—</span>
+                    <b>3</b> Retirada
+                  </div>
+                  <div class="label">Quem vai retirar</div>
+                  <div class="field">Nome completo</div>
+                  <div class="row">
+                    <div class="field grow">Telefone</div>
+                    <div class="field grow">E-mail *</div>
+                  </div>
+                  <div class="label">Retirada</div>
+                  <div class="row">
+                    <div class="field grow">Hoje, 19:30</div>
+                    <div class="field grow">Boa Viagem</div>
+                  </div>
+                  <div class="banner">
+                    <strong style="font-size: 10px">Privacidade</strong>
+                    <div>Os dados do pedido ficam neste navegador. Pagamento demonstrativo, sem
+                      cobrança real ou envio a gateway. <u>Política de Privacidade</u></div>
+                  </div>
+                  <div class="card soft">
+                    <div class="row between"><span>Subtotal</span><span>R$ 36,70</span></div>
+                    <div class="row between"><span>Cupom</span><span>− R$ 3,67</span></div>
+                    <div class="row between"><span>Pontos (120 disp.)</span><span>− R$ 10,00</span></div>
+                    <div class="row between"><strong>Total</strong><strong>R$ 23,03</strong></div>
+                    <div style="font-size: 8.5px; color: #6b6b6b">Limite de 50% do subtotal pago com pontos.</div>
+                  </div>
+                </div>
+                <div class="buy-bar">
+                  <div class="btn primary grow">Confirmar e pagar</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>O pedido não depende de consentimento obrigatório; o aviso explica o armazenamento local.</li>
+              <li>Pontos e cupom são combináveis, respeitando o limite de 50%.</li>
+              <li>Erros aparecem junto ao campo e no resumo do formulário.</li>
+            </ol>
+          </figure>
+
+          <!-- 06 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">06</span> Pagamento <small>/pagamento/:codigo</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">PAGAMENTO</span>
+                  <span class="pill">RZ-6502</span>
+                </div>
+                <div class="body">
+                  <div class="banner">
+                    <div class="row between"><span>Total a pagar</span><strong style="font-size: 14px">R$ 23,03</strong></div>
+                    <div style="font-size: 9px; color: #6b6b6b">Pagamento simulado localmente · sem cobrança ou gateway real</div>
+                  </div>
+                  <div class="row">
+                    <div class="btn grow">Pix</div>
+                    <div class="btn primary grow">Cartão</div>
+                  </div>
+                  <div class="ph qr">QR Code<br />ilustrativo</div>
+                  <div class="field" style="font-size: 8px">00020126580014BR.GOV.BCB.PIX0136raizes…</div>
+                  <div class="row">
+                    <div class="btn grow small">Copiar código</div>
+                    <div class="btn primary grow small">Já paguei</div>
+                  </div>
+                  <div class="card soft">
+                    <div class="label">Ambiente de teste</div>
+                    <div class="row wrap" style="gap: 5px">
+                      <span class="pill">Forçar aprovação</span>
+                      <span class="pill">Forçar recusa</span>
+                      <span class="pill">Simular timeout</span>
+                    </div>
+                  </div>
+                  <div class="ph" style="height: 52px">Estado "processando…" com spinner e aviso para não fechar</div>
+                </div>
+                <div class="buy-bar">
+                  <div class="btn primary grow">Pagar R$ 23,03</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Cartão terminado em 0000 é recusado de forma determinística.</li>
+              <li>Timeout mantém o pedido aguardando pagamento e oferece nova tentativa.</li>
+              <li>Resultado sempre tem retorno visual explícito.</li>
+            </ol>
+          </figure>
+
+          <!-- 07 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">07</span> Acompanhamento <small>/pedido/:codigo</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">PEDIDO RZ-6502</span>
+                  <span class="status-tag">EM PREPARO</span>
+                </div>
+                <div class="body">
+                  <div class="banner">
+                    <strong style="font-size: 11px">Retirada hoje, 19:30</strong>
+                    <span style="font-size: 9px">Raízes — Boa Viagem · balcão</span>
+                  </div>
+                  <div class="timeline" style="margin-top: 4px">
+                    <div class="tl-item">
+                      <span class="tl-dot done">✓</span>
+                      <div class="col" style="gap: 3px"><span class="label">Pagamento aprovado</span><span style="font-size: 9px; color: #6b6b6b">19:12</span></div>
+                    </div>
+                    <div class="tl-item">
+                      <span class="tl-dot done">✓</span>
+                      <div class="col" style="gap: 3px"><span class="label">Recebido pela unidade</span><span style="font-size: 9px; color: #6b6b6b">19:12</span></div>
+                    </div>
+                    <div class="tl-item">
+                      <span class="tl-dot done">●</span>
+                      <div class="col" style="gap: 3px"><span class="label">Em preparo</span><span style="font-size: 9px; color: #6b6b6b">19:14 · previsão 19:30</span></div>
+                    </div>
+                    <div class="tl-item">
+                      <span class="tl-dot"></span>
+                      <div class="col" style="gap: 3px"><span class="label">Pronto para retirada</span><span style="font-size: 9px; color: #9a9a9a">aguardando</span></div>
+                    </div>
+                    <div class="tl-item">
+                      <span class="tl-dot"></span>
+                      <div class="col" style="gap: 3px"><span class="label">Retirado</span><span style="font-size: 9px; color: #9a9a9a">aguardando</span></div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="row between"><span class="label">1x Tapioca de Carne de Sol</span><span class="price">R$ 21,90</span></div>
+                    <div class="row between"><span class="label">2x Suco de Caju</span><span class="price">R$ 17,80</span></div>
+                    <div class="row between"><span>Total pago</span><strong>R$ 23,03</strong></div>
+                  </div>
+                  <div class="row">
+                    <div class="btn grow small">Falar com a unidade</div>
+                    <div class="btn grow small">Meus pedidos</div>
+                  </div>
+                </div>
+                <div class="tabbar">
+                  <div><span class="dot"></span>Início</div>
+                  <div><span class="dot"></span>Cardápio</div>
+                  <div class="on"><span class="dot"></span>Pedidos</div>
+                  <div><span class="dot"></span>Fidelidade</div>
+                  <div><span class="dot"></span>Perfil</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Status e horário são os mesmos exibidos no painel da unidade.</li>
+              <li>Linha do tempo cobre cinco estados, incluindo cancelado.</li>
+              <li>O status mais recente aparece ao abrir a tela; atualização automática não implementada.</li>
+            </ol>
+          </figure>
+
+          <!-- 08 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">08</span> Fidelidade <small>/fidelidade</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">FIDELIDADE</span>
+                  <span class="pill">Cliente Demo</span>
+                </div>
+                <div class="body">
+                  <div class="banner">
+                    <span style="font-size: 9px">Seu saldo</span>
+                    <strong style="font-size: 26px">120 pontos</strong>
+                    <span style="font-size: 9px">equivale a R$ 12,00 em desconto</span>
+                    <div class="line" style="height: 6px"></div>
+                    <span style="font-size: 8.5px; color: #6b6b6b">Faltam 30 pontos para a próxima recompensa</span>
+                  </div>
+                  <div class="label">Como funciona</div>
+                  <div class="grid3">
+                    <div class="ph" style="height: 58px">R$ 1 = 1 ponto</div>
+                    <div class="ph" style="height: 58px">100 pts = R$ 10</div>
+                    <div class="ph" style="height: 58px">até 50% do subtotal</div>
+                  </div>
+                  <div class="label">Recompensas</div>
+                  <div class="card">
+                    <div class="row between"><strong style="font-size: 10.5px">R$ 10 de desconto</strong><span class="status-tag">100 pts</span></div>
+                    <div class="row between"><span style="font-size: 9px; color: #6b6b6b">Pedidos acima de R$ 30</span><span class="btn small">Resgatar</span></div>
+                  </div>
+                  <div class="card">
+                    <div class="row between"><strong style="font-size: 10.5px">Bolo de rolo</strong><span class="status-tag">150 pts</span></div>
+                    <div class="row between"><span style="font-size: 9px; color: #6b6b6b">Pedidos acima de R$ 25</span><span class="btn small" style="opacity: 0.5">Faltam 30</span></div>
+                  </div>
+                  <div class="label">Extrato</div>
+                  <div class="card soft">
+                    <div class="row between"><span style="font-size: 9px">Pedido RZ-1024</span><span style="font-size: 9px">+23 pts</span></div>
+                    <div class="row between"><span style="font-size: 9px">Resgate R$ 10</span><span style="font-size: 9px">−100 pts</span></div>
+                  </div>
+                </div>
+                <div class="tabbar">
+                  <div><span class="dot"></span>Início</div>
+                  <div><span class="dot"></span>Cardápio</div>
+                  <div><span class="dot"></span>Pedidos</div>
+                  <div class="on"><span class="dot"></span>Fidelidade</div>
+                  <div><span class="dot"></span>Perfil</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Regra de conversão visível antes de o cliente resgatar.</li>
+              <li>Recompensa sem saldo mostra quanto falta, sem esconder o item.</li>
+              <li>Extrato registra ganho e resgate com o código do pedido.</li>
+            </ol>
+          </figure>
+
+          <!-- 09 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">09</span> Perfil e privacidade <small>/perfil</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">MINHA CONTA</span>
+                  <span class="pill">sair</span>
+                </div>
+                <div class="body">
+                  <div class="card">
+                    <div class="row between"><span class="label">Nome</span><span style="font-size: 9px">Cliente Demo</span></div>
+                    <div class="row between"><span class="label">E-mail</span><span style="font-size: 9px">cliente@raizes.com</span></div>
+                    <div class="row between"><span class="label">Telefone</span><span style="font-size: 9px">(81) 99999-0000</span></div>
+                    <div class="btn small">Salvar alterações</div>
+                  </div>
+                  <div class="label">Privacidade e consentimentos</div>
+                  <div class="card soft">
+                    <div class="row between"><span style="font-size: 9.5px">Necessários</span><span class="status-tag">sempre ativo</span></div>
+                    <div class="row between"><span style="font-size: 9.5px">Analytics</span><span class="box on"></span></div>
+                    <div class="row between"><span style="font-size: 9.5px">Marketing</span><span class="box"></span></div>
+                    <div style="font-size: 8.5px; color: #6b6b6b">Versão 2026-1 · aceite em 12/03/2026</div>
+                  </div>
+                  <div class="row">
+                    <div class="btn grow small">Exportar meus dados</div>
+                    <div class="btn grow small">Ver política</div>
+                  </div>
+                  <div class="card" style="border-color: #8a8a8a">
+                    <strong style="font-size: 10px">Excluir conta e dados</strong>
+                    <span style="font-size: 8.5px; color: #6b6b6b">Remove cadastro, pedidos, pontos e consentimentos deste dispositivo.</span>
+                    <div class="btn small">Excluir definitivamente</div>
+                  </div>
+                </div>
+                <div class="tabbar">
+                  <div><span class="dot"></span>Início</div>
+                  <div><span class="dot"></span>Cardápio</div>
+                  <div><span class="dot"></span>Pedidos</div>
+                  <div><span class="dot"></span>Fidelidade</div>
+                  <div class="on"><span class="dot"></span>Perfil</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Consentimento pode ser revogado a qualquer momento.</li>
+              <li>Exportação gera JSON com dados e histórico.</li>
+              <li>Exclusão exige digitar "EXCLUIR" na confirmação.</li>
+            </ol>
+          </figure>
+
+          <!-- 10 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">10</span> Operação <small>/operacao</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">OPERAÇÃO</span>
+                  <span class="pill">Recife</span>
+                </div>
+                <div class="body">
+                  <div class="row" style="gap: 6px">
+                    <span class="chip on">Atendente</span>
+                    <span class="chip">Cozinha</span>
+                    <span class="chip">Gerente</span>
+                  </div>
+                  <div class="banner" style="font-size: 8.5px">
+                    Você está como <strong>Atendente</strong>. Pode confirmar retiradas e cancelar pedidos aguardando pagamento.
+                  </div>
+                  <div class="row">
+                    <span class="chip on">Todos</span>
+                    <span class="chip">Recebidos</span>
+                    <span class="chip">Em preparo</span>
+                    <span class="chip">Prontos</span>
+                  </div>
+                  <div class="ops-item">
+                    <div class="row between"><strong style="font-size: 10px">RZ-6502</strong><span class="status-tag">EM PREPARO</span></div>
+                    <span style="font-size: 9px; color: #6b6b6b">Maria · 19:30 · 3 itens · R$ 23,03</span>
+                    <div class="row"><div class="btn small grow">Marcar pronto</div><div class="btn small">Cancelar</div></div>
+                  </div>
+                  <div class="ops-item">
+                    <div class="row between"><strong style="font-size: 10px">RZ-6503</strong><span class="status-tag">PRONTO</span></div>
+                    <span style="font-size: 9px; color: #6b6b6b">João · 19:45 · 2 itens · R$ 31,80</span>
+                    <div class="row"><div class="btn primary small grow">Confirmar retirada</div></div>
+                  </div>
+                  <div class="ops-item">
+                    <div class="row between"><strong style="font-size: 10px">RZ-6504</strong><span class="status-tag">RECEBIDO</span></div>
+                    <span style="font-size: 9px; color: #6b6b6b">Ana · 20:00 · 1 item · R$ 18,90</span>
+                    <div class="row"><div class="btn small grow" style="opacity: 0.45">Ação do perfil cozinha</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Perfil altera as ações disponíveis e o texto de permissão.</li>
+              <li>Fila ordenada por status e horário de retirada.</li>
+              <li>Gerente vê também o botão de restaurar dados de demonstração.</li>
+            </ol>
+          </figure>
+
+          <!-- 11 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">11</span> Totem <small>/totem</small></figcaption>
+            <div class="device-wrap">
+              <div class="device" style="border-radius: 10px">
+                <div class="status"><span>9:41</span><span>quiosque</span></div>
+                <div class="appbar" style="padding: 12px 18px">
+                  <span class="brand" style="font-size: 18px">RAÍZES</span>
+                  <span class="pill">Recife · Boa Viagem</span>
+                </div>
+                <div class="body" style="gap: 12px">
+                  <div class="row between">
+                    <strong style="font-size: 15px">Olá! Vamos pedir?</strong>
+                    <span class="pill">tempo estimado 20 min</span>
+                  </div>
+                  <div class="field">Seu primeiro nome</div>
+                  <div class="check"><span class="box on"></span><span>Li e aceito a política de privacidade para preparar meu pedido.</span></div>
+                  <div class="chips">
+                    <span class="chip on">Tapiocas</span>
+                    <span class="chip">Cuscuz</span>
+                    <span class="chip">Salgados</span>
+                    <span class="chip">Bebidas</span>
+                  </div>
+                  <div class="grid2">
+                    <div class="card">
+                      <div class="ph" style="height: 74px">foto</div>
+                      <div class="line t80"></div>
+                      <div class="row between"><span class="price">R$ 18,90</span><span class="pill">ver</span></div>
+                    </div>
+                    <div class="card">
+                      <div class="ph" style="height: 74px">foto</div>
+                      <div class="line t70"></div>
+                      <div class="row between"><span class="price">R$ 16,90</span><span class="pill">ver</span></div>
+                    </div>
+                    <div class="card">
+                      <div class="ph" style="height: 74px">foto</div>
+                      <div class="line t60"></div>
+                      <div class="row between"><span class="price">R$ 14,90</span><span class="pill">ver</span></div>
+                    </div>
+                    <div class="card">
+                      <div class="ph" style="height: 74px">foto</div>
+                      <div class="line t70"></div>
+                      <div class="row between"><span class="price">R$ 12,90</span><span class="pill">ver</span></div>
+                    </div>
+                  </div>
+                  <div class="ph" style="height: 62px">Folha de detalhe do item: adicionais, observação e quantidade</div>
+                </div>
+                <div class="totem-bar">
+                  <div class="col grow" style="gap: 3px">
+                    <span class="label">2 itens</span>
+                    <strong style="font-size: 15px">R$ 35,80</strong>
+                  </div>
+                  <div class="btn primary" style="padding: 12px 20px">Continuar</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Alvos grandes e sem barra de navegação: uso em pé, com toque.</li>
+              <li>O primeiro nome é solicitado; o aviso de privacidade não bloqueia o pedido.</li>
+              <li>O wireframe prevê retorno após 20 s; no protótipo, use Novo atendimento.</li>
+            </ol>
+          </figure>
+
+          <!-- 12 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">12</span> Confirmação <small>/pagamento (retorno)</small></figcaption>
+            <div class="device-wrap">
+              <div class="device">
+                <div class="status"><span>9:41</span><span>▮▮▮ ▮</span></div>
+                <div class="appbar">
+                  <span class="brand">PEDIDO CONFIRMADO</span>
+                  <span class="status-tag">RECEBIDO</span>
+                </div>
+                <div class="body">
+                  <div class="ph" style="height: 92px">Ícone de confirmação</div>
+                  <div class="center col" style="gap: 4px">
+                    <strong style="font-size: 20px">RZ-6502</strong>
+                    <span style="font-size: 9.5px; color: #6b6b6b">Apresente este código no balcão</span>
+                  </div>
+                  <div class="card">
+                    <div class="row between"><span class="label">Retirada</span><strong style="font-size: 10px">Hoje, 19:30</strong></div>
+                    <div class="row between"><span class="label">Unidade</span><span style="font-size: 9.5px">Boa Viagem</span></div>
+                    <div class="row between"><span class="label">Pagamento</span><span style="font-size: 9.5px">Pix aprovado</span></div>
+                    <div class="row between"><span class="label">Pontos</span><span style="font-size: 9.5px">+23 pontos</span></div>
+                  </div>
+                  <div class="banner">
+                    <span style="font-size: 9px">Você receberá o aviso quando o pedido estiver pronto.</span>
+                  </div>
+                </div>
+                <div class="buy-bar">
+                  <div class="btn primary grow">Acompanhar pedido</div>
+                </div>
+                <div class="buy-bar" style="margin-top: 0; border-top: 0; padding-top: 0">
+                  <div class="btn grow">Voltar ao início</div>
+                </div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Código curto é o elo entre cliente, cozinha e balcão.</li>
+              <li>Retorno do simulador local gera um destes três estados: aprovado, recusado ou em processamento.</li>
+              <li>Ação primária segue o fluxo; a secundária encerra a jornada.</li>
+            </ol>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Fluxo do cliente — desktop</h2>
+          <p>1440 × 900 · mesma arquitetura de informação, com aproveitamento horizontal</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 700px 700px; justify-content: space-between; gap: 26px">
+          <!-- D1 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">D1</span> Início <small>/</small></figcaption>
+            <div class="desk-wrap">
+              <div class="desk">
+                <div class="desk-head">
+                  <span class="brand" style="font-size: 18px">RAÍZES</span>
+                  <div class="desk-nav">
+                    <span>Cardápio</span><span>Unidades</span><span>Promoções</span><span>Fidelidade</span><span>Meus pedidos</span>
+                  </div>
+                  <span class="pill">Recife · Boa Viagem</span>
+                  <span class="pill">Entrar</span>
+                </div>
+                <div class="desk-body">
+                  <div class="desk-hero">
+                    <div class="h1-lines">
+                      <div class="line dark"></div>
+                      <div class="line dark"></div>
+                      <div class="line dark"></div>
+                      <div class="line t70"></div>
+                      <div class="line t50"></div>
+                      <div class="row" style="margin-top: 10px">
+                        <div class="btn primary" style="min-width: 190px">Ver cardápio</div>
+                        <div class="btn" style="min-width: 150px">Como funciona</div>
+                      </div>
+                    </div>
+                    <div class="ph hero" style="height: 330px">Composição de campanha</div>
+                  </div>
+                  <div class="row between" style="margin-top: 8px">
+                    <strong style="font-size: 16px">Categorias</strong>
+                    <span class="pill">ver todas</span>
+                  </div>
+                  <div class="chips">
+                    <span class="chip on">Tapiocas</span><span class="chip">Cuscuz</span><span class="chip">Salgados</span>
+                    <span class="chip">Doces</span><span class="chip">Bebidas</span><span class="chip">Combos</span>
+                  </div>
+                  <div class="row between" style="margin-top: 6px">
+                    <strong style="font-size: 16px">Mais pedidos na unidade</strong>
+                    <span class="pill">4 itens</span>
+                  </div>
+                  <div class="desk-cards">
+                    <div class="card"><div class="ph" style="height: 140px">foto</div><div class="line t80"></div><div class="row between"><span class="price">R$ 18,90</span><span class="pill">+</span></div></div>
+                    <div class="card"><div class="ph" style="height: 140px">foto</div><div class="line t70"></div><div class="row between"><span class="price">R$ 16,90</span><span class="pill">+</span></div></div>
+                    <div class="card"><div class="ph" style="height: 140px">foto</div><div class="line t60"></div><div class="row between"><span class="price">R$ 9,90</span><span class="pill">+</span></div></div>
+                    <div class="card"><div class="ph" style="height: 140px">foto</div><div class="line t70"></div><div class="row between"><span class="price">R$ 29,90</span><span class="pill">+</span></div></div>
+                  </div>
+                </div>
+                <div class="desk-footer"></div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Hero em duas colunas; o CTA não compete com a navegação.</li>
+              <li>Grade de quatro produtos por linha, sem alterar a ordem de leitura.</li>
+              <li>Rodapé fixo com canais, LGPD e aviso de projeto acadêmico.</li>
+            </ol>
+          </figure>
+
+          <!-- D2 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">D2</span> Cardápio com carrinho <small>/cardapio</small></figcaption>
+            <div class="desk-wrap">
+              <div class="desk">
+                <div class="desk-head">
+                  <span class="brand" style="font-size: 18px">RAÍZES</span>
+                  <div class="desk-nav">
+                    <span>Cardápio</span><span>Unidades</span><span>Promoções</span><span>Fidelidade</span><span>Meus pedidos</span>
+                  </div>
+                  <span class="pill">Recife · Boa Viagem</span>
+                  <span class="pill">Carrinho · 2</span>
+                </div>
+                <div class="desk-body">
+                  <div class="desk-cols">
+                    <div class="col" style="gap: 14px">
+                      <div class="search">Buscar no cardápio…</div>
+                      <div class="chips">
+                        <span class="chip on">Todas</span><span class="chip">Tapiocas</span><span class="chip">Cuscuz</span>
+                        <span class="chip">Salgados</span><span class="chip">Doces</span><span class="chip">Bebidas</span>
+                      </div>
+                      <div class="row between"><strong style="font-size: 15px">Tapiocas</strong><span class="pill">3 itens</span></div>
+                      <div class="desk-cards" style="grid-template-columns: repeat(3, 1fr)">
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t80"></div><div class="line t50"></div><div class="row between"><span class="price">R$ 18,90</span><span class="pill">+</span></div></div>
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t70"></div><div class="line t40"></div><div class="row between"><span class="price">R$ 14,90</span><span class="pill">+</span></div></div>
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t60"></div><div class="line t40"></div><div class="row between"><span class="price">R$ 16,90</span><span class="pill">+</span></div></div>
+                      </div>
+                      <div class="row between"><strong style="font-size: 15px">Cuscuz e pratos</strong><span class="pill">3 itens</span></div>
+                      <div class="desk-cards" style="grid-template-columns: repeat(3, 1fr)">
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t80"></div><div class="row between"><span class="price">R$ 16,90</span><span class="pill">+</span></div></div>
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t70"></div><div class="row between"><span class="price">R$ 12,90</span><span class="pill">+</span></div></div>
+                        <div class="card"><div class="ph" style="height: 130px">foto</div><div class="line t60"></div><div class="row between"><span class="price">R$ 19,90</span><span class="pill">+</span></div></div>
+                      </div>
+                    </div>
+                    <aside class="card" style="position: sticky; top: 0; gap: 12px">
+                      <strong style="font-size: 15px">Seu pedido</strong>
+                      <div class="row between"><span style="font-size: 11px">Tapioca de Carne de Sol</span><span class="price">R$ 18,90</span></div>
+                      <div class="row between"><span style="font-size: 11px">Suco de Caju · 2</span><span class="price">R$ 17,80</span></div>
+                      <div class="field">Cupom de desconto</div>
+                      <div class="row between"><span style="font-size: 11px">Subtotal</span><span style="font-size: 11px">R$ 36,70</span></div>
+                      <div class="row between"><strong style="font-size: 13px">Total</strong><strong style="font-size: 13px">R$ 36,70</strong></div>
+                      <div class="btn primary">Ir para o checkout</div>
+                      <div style="font-size: 9px; color: #6b6b6b">Retirada no balcão · sem entrega</div>
+                    </aside>
+                  </div>
+                </div>
+                <div class="desk-footer"></div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Carrinho fixo à direita, sem esconder o catálogo.</li>
+              <li>Mesmos componentes e regras do mobile, em duas colunas.</li>
+              <li>Cupom permanece editável até o checkout.</li>
+            </ol>
+          </figure>
+
+          <!-- D3 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">D3</span> Checkout <small>/checkout</small></figcaption>
+            <div class="desk-wrap">
+              <div class="desk">
+                <div class="desk-head">
+                  <span class="brand" style="font-size: 18px">RAÍZES</span>
+                  <div class="desk-nav"><span>Cardápio</span><span>Unidades</span><span>Promoções</span></div>
+                  <span class="pill">Checkout</span>
+                </div>
+                <div class="desk-body">
+                  <div class="desk-cols" style="grid-template-columns: 1.5fr 1fr">
+                    <div class="col" style="gap: 16px">
+                      <div class="steps" style="font-size: 12px">
+                        <b class="on">1</b> Dados
+                        <span>—</span>
+                        <b>2</b> Pagamento
+                        <span>—</span>
+                        <b>3</b> Retirada
+                      </div>
+                      <strong style="font-size: 16px">Quem vai retirar</strong>
+                      <div class="row"><div class="field grow">Nome completo</div><div class="field grow">Telefone</div></div>
+                      <div class="field">E-mail *</div>
+                      <strong style="font-size: 16px">Retirada</strong>
+                      <div class="row"><div class="field grow">Hoje, 19:30</div><div class="field grow">Raízes — Boa Viagem</div></div>
+                      <div class="banner" style="font-size: 11px">
+                        <strong>Privacidade</strong>
+                        <div style="font-size: 10.5px">Os dados ficam neste navegador. Pagamento demonstrativo, sem cobrança real ou envio a gateway. Política de Privacidade.</div>
+                      </div>
+                    </div>
+                    <aside class="card" style="gap: 12px">
+                      <strong style="font-size: 15px">Resumo</strong>
+                      <div class="row between"><span style="font-size: 11px">Subtotal</span><span style="font-size: 11px">R$ 36,70</span></div>
+                      <div class="row between"><span style="font-size: 11px">Cupom RAIZES10</span><span style="font-size: 11px">− R$ 3,67</span></div>
+                      <div class="row between"><span style="font-size: 11px">120 pontos</span><span style="font-size: 11px">− R$ 10,00</span></div>
+                      <div class="row between"><strong style="font-size: 14px">Total</strong><strong style="font-size: 14px">R$ 23,03</strong></div>
+                      <div class="btn primary">Confirmar e pagar</div>
+                      <div style="font-size: 9px; color: #6b6b6b">Limite de 50% do subtotal em pontos.</div>
+                    </aside>
+                  </div>
+                </div>
+                <div class="desk-footer"></div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Resumo fixo confirma o efeito de cupom e pontos em tempo real.</li>
+              <li>Consentimento fica no corpo, perto do CTA — não em modal.</li>
+              <li>Mesma validação do mobile, com resumo e indicação dos campos inválidos.</li>
+            </ol>
+          </figure>
+
+          <!-- D4 -->
+          <figure class="wf">
+            <figcaption class="wf-cap"><span class="wf-num">D4</span> Operação <small>/operacao</small></figcaption>
+            <div class="desk-wrap">
+              <div class="desk">
+                <div class="desk-head">
+                  <span class="brand" style="font-size: 18px">RAÍZES</span>
+                  <div class="desk-nav"><span>Operação</span><span>Unidade: Recife</span></div>
+                  <span class="pill">Gerente</span>
+                </div>
+                <div class="desk-body">
+                  <div class="desk-cols" style="grid-template-columns: 260px 1fr">
+                    <aside class="col" style="gap: 12px">
+                      <strong style="font-size: 14px">Perfil de acesso</strong>
+                      <div class="chip on" style="font-size: 12px; padding: 7px 12px">Atendente</div>
+                      <div class="chip" style="font-size: 12px; padding: 7px 12px">Cozinha</div>
+                      <div class="chip" style="font-size: 12px; padding: 7px 12px">Gerente</div>
+                      <div class="banner" style="font-size: 10.5px">Permissões simuladas no cliente. O gerente também restaura os dados de demonstração.</div>
+                      <div class="kpi"><span style="font-size: 10px; color: #6b6b6b">Na fila</span><strong>4</strong></div>
+                      <div class="kpi"><span style="font-size: 10px; color: #6b6b6b">Prontos</span><strong>2</strong></div>
+                    </aside>
+                    <div class="col" style="gap: 12px">
+                      <div class="row between">
+                        <strong style="font-size: 16px">Fila da unidade</strong>
+                        <div class="row"><span class="chip on">Todos</span><span class="chip">Recebidos</span><span class="chip">Em preparo</span><span class="chip">Prontos</span></div>
+                      </div>
+                      <div class="row" style="gap: 14px; align-items: stretch">
+                        <div class="card grow" style="gap: 8px">
+                          <div class="row between"><strong style="font-size: 12px">RZ-6502</strong><span class="status-tag">EM PREPARO</span></div>
+                          <span style="font-size: 10.5px; color: #6b6b6b">Maria · 19:30 · 3 itens</span>
+                          <div class="line t70"></div><div class="line t50"></div>
+                          <div class="row"><div class="btn small grow">Marcar pronto</div><div class="btn small">Cancelar</div></div>
+                        </div>
+                        <div class="card grow" style="gap: 8px">
+                          <div class="row between"><strong style="font-size: 12px">RZ-6503</strong><span class="status-tag">PRONTO</span></div>
+                          <span style="font-size: 10.5px; color: #6b6b6b">João · 19:45 · 2 itens</span>
+                          <div class="line t60"></div><div class="line t40"></div>
+                          <div class="row"><div class="btn primary small grow">Confirmar retirada</div></div>
+                        </div>
+                        <div class="card grow" style="gap: 8px">
+                          <div class="row between"><strong style="font-size: 12px">RZ-6504</strong><span class="status-tag">RECEBIDO</span></div>
+                          <span style="font-size: 10.5px; color: #6b6b6b">Ana · 20:00 · 1 item</span>
+                          <div class="line t80"></div><div class="line t40"></div>
+                          <div class="row"><div class="btn small grow" style="opacity: 0.5">Aguardando cozinha</div></div>
+                        </div>
+                        <div class="card grow" style="gap: 8px">
+                          <div class="row between"><strong style="font-size: 12px">RZ-6501</strong><span class="status-tag">AGUARDANDO PAGAMENTO</span></div>
+                          <span style="font-size: 10.5px; color: #6b6b6b">Lucas · 19:15 · 2 itens</span>
+                          <div class="line t60"></div><div class="line t50"></div>
+                          <div class="row"><div class="btn small grow">Cancelar</div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="desk-footer"></div>
+              </div>
+            </div>
+            <ol class="wf-notes">
+              <li>Perfil à esquerda, fila à direita: leitura operacional em um só olhar.</li>
+              <li>Cartões mostram apenas as ações permitidas ao perfil ativo.</li>
+              <li>Indicadores no topo apoiam o gerente; não substituem a fila.</li>
+            </ol>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Mapa de fluxo e decisões de interface</h2>
+          <p>Como os frames se conectam e onde o sistema precisa responder</p>
+        </div>
+
+        <div class="flowmap">
+          <div class="flow-row">
+            <span class="flow-label">Descoberta</span>
+            <span class="node dark">Início</span><span class="arrow">→</span>
+            <span class="node">Cardápio</span><span class="arrow">→</span>
+            <span class="node">Detalhe do produto</span><span class="arrow">→</span>
+            <span class="node">Carrinho</span>
+          </div>
+          <div class="flow-row">
+            <span class="flow-label">Fechamento</span>
+            <span class="node">Checkout</span><span class="arrow">→</span>
+            <span class="node">Pagamento</span><span class="arrow">→</span>
+            <span class="node alt">Aprovado</span><span class="arrow">→</span>
+            <span class="node">Confirmação</span><span class="arrow">→</span>
+            <span class="node">Acompanhamento</span>
+          </div>
+          <div class="flow-row">
+            <span class="flow-label">Desvios</span>
+            <span class="node alt">Pagamento recusado</span><span class="arrow">→</span>
+            <span class="node">Nova tentativa</span>
+            <span style="width: 18px"></span>
+            <span class="node alt">Timeout</span><span class="arrow">→</span>
+            <span class="node">Consultar pedido</span>
+            <span style="width: 18px"></span>
+            <span class="node alt">Cancelado</span><span class="arrow">→</span>
+            <span class="node">Histórico</span>
+          </div>
+          <div class="flow-row">
+            <span class="flow-label">Operação</span>
+            <span class="node">Painel</span><span class="arrow">→</span>
+            <span class="node">Fila</span><span class="arrow">→</span>
+            <span class="node">Comanda</span><span class="arrow">→</span>
+            <span class="node alt">Recebido</span><span class="arrow">→</span>
+            <span class="node alt">Em preparo</span><span class="arrow">→</span>
+            <span class="node alt">Pronto</span><span class="arrow">→</span>
+            <span class="node alt">Retirado</span>
+          </div>
+          <div class="flow-row">
+            <span class="flow-label">Totem</span>
+            <span class="node">Identificação</span><span class="arrow">→</span>
+            <span class="node">Consentimento</span><span class="arrow">→</span>
+            <span class="node">Montagem</span><span class="arrow">→</span>
+            <span class="node">Pagamento</span><span class="arrow">→</span>
+            <span class="node">Código de retirada</span>
+          </div>
+          <div class="flow-row">
+            <span class="flow-label">Conta e LGPD</span>
+            <span class="node">Perfil</span><span class="arrow">→</span>
+            <span class="node">Consentimentos</span><span class="arrow">→</span>
+            <span class="node">Exportar dados</span>
+            <span style="width: 18px"></span>
+            <span class="node alt">Excluir conta</span><span class="arrow">→</span>
+            <span class="node">Confirmação com palavra-chave</span>
+          </div>
+        </div>
+
+        <div class="notes-grid">
+          <div class="note">
+            <strong>Mobile-first, não mobile-only</strong>
+            O mobile define a ordem dos blocos e o tamanho dos alvos; o desktop redistribui os mesmos
+            blocos em duas colunas, sem criar um fluxo paralelo.
+          </div>
+          <div class="note">
+            <strong>Uma ação primária por tela</strong>
+            Cada frame tem um CTA principal (adicionar, ir ao checkout, pagar, acompanhar). Ações
+            secundárias ficam com contorno, nunca competindo por atenção.
+          </div>
+          <div class="note">
+            <strong>Estados sempre desenhados</strong>
+            Vazio, carregando, erro, indisponível e sucesso fazem parte do wireframe: é onde o
+            produto costuma falhar na implementação.
+          </div>
+          <div class="note">
+            <strong>Contexto de retirada</strong>
+            Unidade e horário aparecem no cabeçalho, no checkout e na confirmação, porque não existe
+            entrega: o pedido só faz sentido amarrado a uma loja e a um horário.
+          </div>
+          <div class="note">
+            <strong>LGPD no fluxo, não no rodapé</strong>
+            O aviso de privacidade aparece no checkout e no totem. As preferências opcionais podem
+            ser revistas no perfil, com exportação e exclusão a um clique.
+          </div>
+          <div class="note">
+            <strong>Operação com permissão visível</strong>
+            O perfil ativo muda as ações disponíveis e explica o motivo quando algo está bloqueado,
+            evitando botões que "não funcionam".
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

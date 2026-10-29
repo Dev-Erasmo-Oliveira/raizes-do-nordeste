@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="700" viewBox="0 0 1440 700" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="ar-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5b4a40"/></marker>
+<marker id="ar-terra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b5451b"/></marker>
+<marker id="ar-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2f5d3a"/></marker>
+<marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2c567a"/></marker>
+<marker id="ar-mut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9a8a7e"/></marker>
+</defs>
+<rect width="1440" height="700" fill="#ffffff"/>
+<text x="40" y="40.0" font-size="24" font-weight="bold" fill="#2a201a" text-anchor="start">
+<tspan x="40" dy="0.0">Mapa de navegação da aplicação</tspan>
+</text>
+<rect x="600" y="76" width="240" height="68" rx="12" fill="#b5451b" stroke="#8e3413" stroke-width="1.5"/>
+<text x="720.0" y="101.8" font-size="22" font-weight="bold" fill="#2a201a" text-anchor="middle">
+<tspan x="720.0" dy="0.0">Início</tspan>
+</text>
+<text x="720.0" y="125.0" font-size="15" font-weight="normal" fill="#f7e3d8" text-anchor="middle">
+<tspan x="720.0" dy="0.0">home por canal</tspan>
+</text>
+<rect x="40" y="216" width="440" height="400" rx="14" fill="#fffdfa" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="60" y="250.0" font-size="19" font-weight="bold" fill="#b5451b" text-anchor="start">
+<tspan x="60" dy="0.0">Descoberta e pedido</tspan>
+</text>
+<rect x="60" y="276" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="298.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Cardápio</tspan>
+</text>
+<rect x="60" y="332" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="354.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Detalhe do produto</tspan>
+</text>
+<rect x="60" y="388" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="410.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Carrinho</tspan>
+</text>
+<rect x="60" y="444" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="466.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Checkout</tspan>
+</text>
+<rect x="60" y="500" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="522.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Pagamento</tspan>
+</text>
+<rect x="60" y="556" width="400" height="44" rx="8" fill="#f7e3d8" stroke="#b5451b" stroke-width="1.2"/>
+<text x="280" y="578.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="280" dy="0.0">Acompanhamento</tspan>
+</text>
+<line x1="720" y1="144" x2="260" y2="214" stroke="#b5451b" stroke-width="1.5" marker-end="url(#ar-ink)"/>
+<rect x="510" y="216" width="440" height="400" rx="14" fill="#fffdfa" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="530" y="250.0" font-size="19" font-weight="bold" fill="#2f5d3a" text-anchor="start">
+<tspan x="530" dy="0.0">Conta e fidelidade</tspan>
+</text>
+<rect x="530" y="276" width="400" height="44" rx="8" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.2"/>
+<text x="750" y="298.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="750" dy="0.0">Entrar / Cadastro</tspan>
+</text>
+<rect x="530" y="332" width="400" height="44" rx="8" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.2"/>
+<text x="750" y="354.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="750" dy="0.0">Meus pedidos</tspan>
+</text>
+<rect x="530" y="388" width="400" height="44" rx="8" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.2"/>
+<text x="750" y="410.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="750" dy="0.0">Fidelidade</tspan>
+</text>
+<rect x="530" y="444" width="400" height="44" rx="8" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.2"/>
+<text x="750" y="466.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="750" dy="0.0">Perfil e privacidade</tspan>
+</text>
+<rect x="530" y="500" width="400" height="44" rx="8" fill="#e2ede3" stroke="#2f5d3a" stroke-width="1.2"/>
+<text x="750" y="522.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="750" dy="0.0">Política de privacidade</tspan>
+</text>
+<line x1="720" y1="144" x2="730" y2="214" stroke="#2f5d3a" stroke-width="1.5" marker-end="url(#ar-ink)"/>
+<rect x="980" y="216" width="440" height="400" rx="14" fill="#fffdfa" stroke="#d9c6b2" stroke-width="1.5"/>
+<text x="1000" y="250.0" font-size="19" font-weight="bold" fill="#e0a03a" text-anchor="start">
+<tspan x="1000" dy="0.0">Operação e canais</tspan>
+</text>
+<rect x="1000" y="276" width="400" height="44" rx="8" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.2"/>
+<text x="1220" y="298.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="1220" dy="0.0">Painel operacional</tspan>
+</text>
+<rect x="1000" y="332" width="400" height="44" rx="8" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.2"/>
+<text x="1220" y="354.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="1220" dy="0.0">Fila da unidade</tspan>
+</text>
+<rect x="1000" y="388" width="400" height="44" rx="8" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.2"/>
+<text x="1220" y="410.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="1220" dy="0.0">Totem</tspan>
+</text>
+<rect x="1000" y="444" width="400" height="44" rx="8" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.2"/>
+<text x="1220" y="466.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="1220" dy="0.0">Carrinho do totem</tspan>
+</text>
+<rect x="1000" y="500" width="400" height="44" rx="8" fill="#fbefd8" stroke="#e0a03a" stroke-width="1.2"/>
+<text x="1220" y="522.0" font-size="17" font-weight="normal" fill="#2a201a" text-anchor="middle">
+<tspan x="1220" dy="0.0">Pagamento no totem</tspan>
+</text>
+<line x1="720" y1="144" x2="1200" y2="214" stroke="#e0a03a" stroke-width="1.5" marker-end="url(#ar-ink)"/>
+<text x="720" y="668.0" font-size="15" font-weight="normal" fill="#7d6c61" text-anchor="middle">
+<tspan x="720" dy="0.0">Rotas protegidas exigem sessão; o painel operacional simula perfis de atendente, cozinha e gerente.</tspan>
+</text>
+</svg>

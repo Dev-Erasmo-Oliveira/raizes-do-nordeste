@@ -1,0 +1,24 @@
+/* Cores e fontes do site.
+   Deixei poucas variáveis para facilitar a manutenção. */
+:root {
+  --laranja: #b5451b;
+  --laranja-escuro: #8e3413;
+  --laranja-claro: #fdf0e8;
+  --creme: #fff8f0;
+  --branco: #ffffff;
+  --texto: #2b2b2b;
+  --texto-claro: #5f5f5f;
+  --borda: #dddddd;
+  --borda-clara: #eeeeee;
+  --fundo-claro: #f7f7f7;
+  --verde: #2f6b45;
+  --verde-claro: #e6f2e9;
+  --vermelho: #a92f24;
+  --vermelho-claro: #fdecea;
+  --amarelo-texto: #6b4a00;
+  --amarelo-claro: #fff4d6;
+  --azul: #2c567a;
+  --azul-claro: #e7f0f8;
+  --fonte: 'Segoe UI', Arial, Helvetica, sans-serif;
+  --fonte-mono: Consolas, 'Courier New', monospace;
+}

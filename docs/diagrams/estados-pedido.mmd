@@ -1,0 +1,17 @@
+stateDiagram-v2
+  direction LR
+  [*] --> AGUARDANDO_PAGAMENTO: pedido criado
+  AGUARDANDO_PAGAMENTO --> RECEBIDO: pagamento aprovado
+  AGUARDANDO_PAGAMENTO --> PAGAMENTO_RECUSADO: recusa simulada
+  AGUARDANDO_PAGAMENTO --> AGUARDANDO_PAGAMENTO: timeout (pagamento EXPIRADO)
+  AGUARDANDO_PAGAMENTO --> CANCELADO: cancelamento
+  PAGAMENTO_RECUSADO --> AGUARDANDO_PAGAMENTO: nova tentativa
+  PAGAMENTO_RECUSADO --> CANCELADO: desistência
+  RECEBIDO --> EM_PREPARO: cozinha inicia
+  EM_PREPARO --> PRONTO: preparo concluído
+  PRONTO --> RETIRADO: retirada confirmada
+  RECEBIDO --> CANCELADO: gerente cancela
+  EM_PREPARO --> CANCELADO: gerente cancela
+  PRONTO --> CANCELADO: gerente cancela
+  RETIRADO --> [*]
+  CANCELADO --> [*]

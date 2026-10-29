@@ -1,0 +1,29 @@
+flowchart TB
+  START(["Primeiro contato<br/>web, app ou totem"]) --> UNID["Escolhe a unidade<br/>Recife, Fortaleza ou Natal"]
+  UNID --> ABERTA{"Unidade aberta<br/>no horário?"}
+  ABERTA -- "Não" --> BLOQ["Exibe horário e<br/>bloqueia o pedido"] --> UNID
+  ABERTA -- "Sim" --> CARD["Explora cardápio<br/>por categoria e busca"]
+  CARD --> PROD["Personaliza o item<br/>adicionais e observação"]
+  PROD --> CART["Revisa carrinho<br/>quantidades e subtotal"]
+  CART --> CHECK["Checkout: nome, telefone,<br/>e-mail, horário e aviso de privacidade"]
+  CHECK --> CONS{"Autoriza o uso<br/>dos dados?"}
+  CONS -- "Não" --> AVISO["Explica finalidade e<br/>impede a continuidade"] --> CHECK
+  CONS -- "Sim" --> BENEF["Aplica cupom e/ou pontos<br/>limite de 50% do subtotal"]
+  BENEF --> PAY["Pagamento simulado localmente<br/>Pix ou cartão, sem gateway real"]
+  PAY --> APROV{"Pagamento<br/>aprovado?"}
+  APROV -- "Não" --> RECUS["PAGAMENTO_RECUSADO<br/>tentar outro método"] --> PAY
+  APROV -- "Sim" --> RECEB["RECEBIDO<br/>cozinha recebe a comanda"]
+  RECEB --> PREP["EM_PREPARO<br/>equipe avança o status"]
+  PREP --> PRONTO["PRONTO<br/>cliente é avisado"]
+  PRONTO --> RETIRA["RETIRADO<br/>código conferido no balcão"]
+  RETIRA --> POS["Pontos creditados<br/>histórico e fidelidade"]
+  POS --> FIM(["Fim da jornada"])
+
+  classDef stage fill:#fff8f0,stroke:#b5451b,color:#2a201a
+  classDef decision fill:#fbefd8,stroke:#9a6412,color:#6f4a10
+  classDef state fill:#e2ede3,stroke:#2f5d3a,color:#23452c
+  classDef integration fill:#e5eef7,stroke:#2c567a,color:#1d3f5c
+  class UNID,CARD,PROD,CART,CHECK,BENEF,RETIRA,POS stage
+  class ABERTA,CONS,APROV decision
+  class BLOQ,AVISO,RECUS,RECEB,PREP,PRONTO state
+  class PAY integration

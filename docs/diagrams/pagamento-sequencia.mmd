@@ -1,0 +1,37 @@
+sequenceDiagram
+  autonumber
+  actor C as Cliente
+  participant UI as Interface<br/>(Web / App / Totem)
+  participant DB as localStorage<br/>(local)
+  participant SIM as PaymentSimulator<br/>(local)
+  participant API as Backend<br/>(conceitual)
+  participant EXT as Sistema de Pagamento Externo<br/>(conceitual)
+
+  C->>UI: Confirma o pedido e escolhe Pix ou cartão
+  UI->>UI: Valida formulário
+  UI->>DB: Salva pedido AGUARDANDO_PAGAMENTO
+  DB-->>UI: Pedido salvo + código
+  Note over UI,EXT: Fluxo de integração futura, conceitual e não executado pelo protótipo
+  opt Integração real em uma versão futura
+    UI->>API: Envia solicitação de pagamento
+    API->>EXT: Solicita autorização
+    EXT-->>API: Retorna aprovação, recusa ou timeout
+    API-->>UI: Devolve o resultado do pagamento
+  end
+  Note over UI,SIM: Execução atual: nenhuma requisição é enviada a gateway ou backend
+  UI->>SIM: Inicia simulação local
+
+  alt Pagamento aprovado
+    SIM-->>UI: Resultado APROVADO
+    UI->>DB: Atualiza pedido para RECEBIDO
+    DB-->>UI: Status salvo + pontos creditados
+    UI-->>C: Tela "Pagamento aprovado" + código de retirada
+  else Pagamento recusado
+    SIM-->>UI: Resultado RECUSADO (ex.: cartão final 0000)
+    UI->>DB: Registra PAGAMENTO_RECUSADO
+    UI-->>C: Mensagem de erro + "Tentar novamente"
+  else Sem resposta (timeout)
+    SIM-->>UI: Resultado EXPIRADO
+    UI->>DB: Mantém AGUARDANDO_PAGAMENTO
+    UI-->>C: Aviso de processamento + consultar pedido
+  end

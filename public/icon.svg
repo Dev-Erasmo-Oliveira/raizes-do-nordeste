@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Raizes do Nordeste">
+  <rect width="64" height="64" rx="14" fill="#B5451B" />
+  <path d="M22 46V18h10a9 9 0 0 1 0 18h-4l10 10" fill="none" stroke="#FFF8F0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

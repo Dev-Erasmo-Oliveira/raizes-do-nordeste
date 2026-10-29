@@ -1,0 +1,56 @@
+flowchart LR
+  C((Cliente))
+  A((Atendente))
+  K((Cozinha))
+  G((Gerente /<br/>Administrador))
+  SP((Sistemas de Pagamento<br/>Externos - conceitual))
+
+  subgraph SIS["Sistema Raízes do Nordeste"]
+    direction LR
+    UC01([Consultar cardápio<br/>por unidade])
+    UC02([Cadastrar-se e<br/>autenticar])
+    UC03([Montar pedido e<br/>escolher retirada])
+    UC04([Aplicar cupom<br/>ou pontos])
+    UC05([Realizar pagamento])
+    UC06([Acompanhar status<br/>do pedido])
+    UC07([Consultar histórico])
+    UC08([Resgatar recompensa])
+    UC09([Gerenciar consentimento<br/>e dados pessoais])
+    UC10([Consultar fila<br/>da unidade])
+    UC11([Avançar status e<br/>confirmar retirada])
+    UC12([Cancelar pedido])
+    UC13([Preparar pedido])
+    UC14([Gerenciar campanhas<br/>e indicadores])
+  end
+
+  C --- UC01
+  C --- UC02
+  C --- UC03
+  C --- UC04
+  C --- UC05
+  SP -.->|conceitual; sem integração real| UC05
+  C --- UC06
+  C --- UC07
+  C --- UC08
+  C --- UC09
+
+  A --- UC10
+  A --- UC11
+  A --- UC12
+  K --- UC10
+  K --- UC11
+  K --- UC13
+  G --- UC10
+  G --- UC11
+  G --- UC12
+  G --- UC14
+
+  UC03 -.->|«include»| UC04
+  UC05 -.->|«include»| UC03
+  UC06 -.->|«include»| UC05
+
+  classDef actor fill:#2f5d3a,stroke:#23452c,color:#fff8f0,font-weight:bold
+  classDef uc fill:#fff8f0,stroke:#b5451b,color:#2a201a
+  class C,A,K,G actor
+  class SP actor
+  class UC01,UC02,UC03,UC04,UC05,UC06,UC07,UC08,UC09,UC10,UC11,UC12,UC13,UC14 uc

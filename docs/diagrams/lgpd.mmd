@@ -1,0 +1,28 @@
+flowchart TB
+  INI(["Primeiro acesso"]) --> BAN["Banner de consentimento<br/>necessários, analytics e marketing"]
+  BAN --> ESCOLHA{"Escolha do titular"}
+  ESCOLHA -- "Aceitar todos" --> TODOS["Necessários + analytics<br/>+ marketing"]
+  ESCOLHA -- "Somente essenciais" --> ESS["Apenas necessários"]
+  ESCOLHA -- "Preferências" --> PREF["Liga/desliga analytics<br/>e marketing"]
+  PREF --> TODOS
+  TODOS --> REG["Registro local: versão 2026-1,<br/>data e escolhas"]
+  ESS --> REG
+  REG --> USO["Aviso de privacidade<br/>e dados do pedido local"]
+  BAN --> PED["Pedido sem checkbox<br/>obrigatório de consentimento"]
+  REG --> PERFIL["Perfil > Privacidade e consentimentos"]
+  PERFIL --> REV["Revogar marketing<br/>a qualquer momento"]
+  PERFIL --> EXP["Exportar meus dados (JSON)"]
+  PERFIL --> DEL["Excluir conta e dados"]
+  DEL --> CONFIRMA{"Digita EXCLUIR?"}
+  CONFIRMA -- "Não" --> PERFIL
+  CONFIRMA -- "Sim" --> REMOVE["Remove conta, pedidos,<br/>pontos e sessão do dispositivo"]
+  REMOVE --> FIM(["Direito atendido"])
+  EXP --> FIM
+  REV --> FIM
+
+  classDef step fill:#fff8f0,stroke:#b5451b,color:#2a201a
+  classDef decision fill:#fbefd8,stroke:#9a6412,color:#6f4a10
+  classDef duty fill:#e2ede3,stroke:#2f5d3a,color:#23452c
+  class BAN,PREF,REG,USO,PERFIL,EXP,REV step
+  class ESCOLHA,CONFIRMA decision
+  class TODOS,ESS,DEL,REMOVE duty
