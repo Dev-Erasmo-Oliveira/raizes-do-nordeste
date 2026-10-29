@@ -310,10 +310,3 @@ Os links públicos estão registrados na tabela de demonstração e no documento
 **RU:** 4772692
 **Instituição:** Centro Universitário Internacional (UNINTER)
 **Professor:** Prof. Esp. Giuliano Lanes de Almeida
-
----
-
-## Uso de ferramentas de IA
-
-Este trabalho foi desenvolvido com apoio de ferramentas de IA para revisão de código,
-diagramação e redação. A declaração completa está no Apêndice A do documento final.
